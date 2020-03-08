@@ -151,9 +151,17 @@ Jenkins服务器（A）
 现在jenkins服务器可免密码直接登陆应用服务器
 
 ## 开始任务配置
+
+> 源码管理的凭据和 api的凭据不是一样的，apiv5的凭据是插件调用码云接口使用的，而源码管理的凭据是jenkins git插件要求的，这> 个凭据格式是用户名密码，如果用的是http的协议需要在凭据管理中再配置一个码云用户名密码的凭据，这样才能选上，如果是ssh 的话> 需要jenkins的机器的ssh key 加入到码云账号中才行
+### 凭据 》系统 》添加域
+
+![](/images/jenkins/jenkins-pingzheng.png)
+
 ![](/images/jenkins/12.png)
 
 ## 构建环境
+
+#### 系统管理 》全局工具配置 》NodeJS；如果不添加nodejs在下面 NodeJS Installation 中将不会出来内容
 
 ![](/images/jenkins/13.png)
 
@@ -174,3 +182,10 @@ Jenkins服务器（A）
 ## 完美部署
 
 ## 暂时先写这么多吧，有空会继续更新...
+
+
+## Jenkins系列
+
+#### [1.使用Jenkins搭建前端构建环境](/2019/01/04/使用Jenkins搭建前端构建环境/)
+#### [2.Jenkins安装插件动态获取git分支](/2019/05/09/Jenkins安装插件动态获取git分支/)
+#### [3.使用Generic Webhook Trigger插件实现Jenkins+WebHooks（码云）持续集成](/2019/05/09/使用Generic%20Webhook%20Trigger插件实现Jenkins+WebHooks（码云）持续集成/)
